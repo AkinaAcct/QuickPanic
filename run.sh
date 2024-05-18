@@ -16,8 +16,8 @@ echo -e "\033[34m我还是不会运行。如果你一定要运行，请source此
 # METHOD 1
 sysrq_panic() {
     warning
-    su -c echo "1" >/proc/sys/kernel/sysrq
-    su -c echo "c" >/proc/sysrq-trigger
+    su -c 'echo "1" >/proc/sys/kernel/sysrq'
+    su -c 'echo "c" >/proc/sysrq-trigger'
 }
 # METHOD 2
 forkbomb_panic() {
